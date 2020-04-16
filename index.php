@@ -3,10 +3,15 @@
 
 $password = $_GET['password'];
 
-if ($password == 'Boolean') {
-    echo '<p style="color: green; font-weight: bold;">ACCESSO AUTORIZZATO</p>';
+if (!empty($_GET)) {
+    if ($password == 'Boolean') {
+        echo '<h1 style="color: green; font-weight: bold;">ACCESSO AUTORIZZATO</h1>';
 
+    }else{
+        echo '<h1 style="color: red; font-weight: bold;">ACCESSO NON AUTORIZZATO</h1>';
+    }
 }else{
-    echo '<p style="color: red; font-weight: bold;">ACCESSO NON AUTORIZZATO</p>';
+    echo '<h1>Inserisci password nell\' URL</h1>';
 }
+
 ?>
